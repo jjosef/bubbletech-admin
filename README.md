@@ -1,3 +1,16 @@
+# Deploying
+
+`gsutil rsync -R build gs://bubbletech-admin`
+
+`gsutil iam ch allUsers:objectViewer gs://bubbletech-admin`
+
+`gsutil web set -m index.html gs://bubbletech-admin`
+
+Set an error page by adding `-e 404.html` if desired.
+
+Create Load Balancer for custom domain routing [see here](https://cloud.google.com/storage/docs/hosting-static-website#lb-ssl)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
