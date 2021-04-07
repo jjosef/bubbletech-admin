@@ -1,5 +1,7 @@
 # Deploying
 
+`yarn run build`
+
 `gsutil rsync -R build gs://bubbletech-admin`
 
 `gsutil iam ch allUsers:objectViewer gs://bubbletech-admin`
