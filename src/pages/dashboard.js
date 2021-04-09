@@ -1,5 +1,9 @@
+import Container from '@material-ui/core/Container';
+
 export function DashboardPage(props) {
   return (
-    <div>Welcome to BubbleTech</div>
+    <Container maxWidth={false}>
+      <div>Welcome to BubbleTech</div>
+    </Container>
   )
 }

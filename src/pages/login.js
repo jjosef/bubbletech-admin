@@ -45,10 +45,9 @@ export function LoginPage(props) {
   const auth = useAuth();
 
   const onSubmit = ({ values, errors}) => {
-    console.log(values, errors);
     setLoginErrors({});
     auth.login(values.email, values.password).then((user) => {
-      console.log(`Logged in as`, user);
+      console.log(`Logged in as`, user.email, user.uid);
     }).catch((err) => {
       console.log(err);
       setLoginErrors(err);
